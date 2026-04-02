@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+    <item android:id="@+id/menu_mark_learned" android:title="Отметить изученным" />
+    <item android:id="@+id/menu_practice" android:title="Практиковать" />
+    <item android:id="@+id/menu_remove" android:title="Удалить из словаря" />
+</menu>
