@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mova">
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        tools:ignore="ExtraText">
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MusicService" />
+
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".TrainingActivity" android:exported="false" />
+        <activity android:name=".GrammarPracticeActivity" android:exported="false" />
+        <activity android:name=".DictionaryActivity" android:exported="false" />
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="Абранае"
+            tools:ignore="ExtraText" />
+
+
+
+        <activity android:name=".ArticlesActivity" android:exported="false" />
+        <activity android:name=".PersonalDictionaryActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".GrammarDetailActivity" android:exported="false" />
+        <activity android:name=".ArticleDetailActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity
+            android:name=".GrammarActivity"
+            android:label="Беларуская граматыка"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".TopicDetailActivity"
+            android:label="Дэталі тэмы"
+            android:parentActivityName=".GrammarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+</manifest>

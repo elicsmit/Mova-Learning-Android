@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#4285F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Логотип -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher_mova_simple"
+            android:contentDescription="Логотип Mova" />
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Добро пожаловать в МОВА!"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Присоединяйтесь к нашему сообществу"
+            android:textColor="#E3F2FD"
+            android:textSize="16sp" />
+
+        <!-- Карточка с преимуществами -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Заголовок преимуществ -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Преимущества регистрации"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Список преимуществ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <!-- Преимущество 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_notifications"
+                            android:tint="#4285F4"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Получайте уведомления о новых уроках и статьях"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Преимущество 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_save"
+                            android:tint="#4285F4"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Сохраните ваши любимые слова и правила"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Преимущество 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_sync"
+                            android:tint="#4285F4"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Синхронизация прогресса между устройствами"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Преимущество 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_stats"
+                            android:tint="#4285F4"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Отслеживайте свой прогресс в изучении языка"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Преимущество 5 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            android:src="@drawable/ic_community"
+                            android:tint="#4285F4"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Присоединяйтесь к сообществу по изучению белорусского языка"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Кнопки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <!-- Кнопка регистрации -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:text="Зарегистрироваться"
+                android:textColor="#4285F4"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Кнопка входа -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:text="Войти"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <!-- Пропустить -->
+            <TextView
+                android:id="@+id/btnSkip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Пропустить"
+                android:textColor="#E3F2FD"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

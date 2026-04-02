@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Кнопка назад -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Назад"
+            android:layout_marginBottom="16dp"
+            android:tint="#2196F3"
+            tools:ignore="UseAppTint" />
+
+        <!-- Header Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="#FFFFFF">
+
+
+                <!-- Profile Info Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Profile Image -->
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/avatar_default"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/circle_bg" />
+
+                        <ImageButton
+                            android:id="@+id/btn_edit_photo"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_edit"
+                            android:background="#2196F3"
+                            android:layout_alignBottom="@id/profile_image"
+                            android:layout_alignEnd="@id/profile_image"
+                            android:layout_margin="4dp"
+                            android:tint="#FFFFFF"
+                            tools:ignore="UseAppTint" />
+
+
+                    </RelativeLayout>
+
+                    <!-- User Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Міхась"
+                                android:textColor="#2C3E50"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/btn_edit_name"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="8dp"
+                                android:background="?android:attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_edit_white"
+                                android:tint="#2196F3"
+                                tools:ignore="UseAppTint" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_user_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🎓 Узровень: Сярэдні"
+                            android:textColor="#4CAF50"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_current_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📅 Студзень 2024"
+                            android:textColor="#FF9800"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stats Grid -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Статыстыка"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- First Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Active Days -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#E3F2FD"
+                        android:padding="12dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_active_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#2196F3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Актыўныя дні"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Current Streak -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#E8F5E8"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_current_streak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#4CAF50" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Бягучы стрык"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Max Streak -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFF3E0"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_max_streak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#FF9800" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Макс. стрык"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Second Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Learned Words -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#F3E5F5"
+                        android:padding="12dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_learned_words"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="347"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#9C27B0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Словы"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Completed Lessons -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#E0F2F1"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_completed_lessons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#009688" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Урокі"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Experience -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBEE"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_experience"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2150"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#F44336" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Досвед"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Personal Dictionary -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📚 Мой слоўнік"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50" />
+
+                    <TextView
+                        android:id="@+id/tv_words_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="347 словаў"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_personal_dictionary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btn_view_all_words"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Глядзець усе словы"
+                    android:textSize="14sp"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="#FFFFFF"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawableTint="#FFFFFF" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Achievements -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏆 Дасягненні"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="12dp" />
+
+                <GridView
+                    android:id="@+id/gv_achievements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:verticalSpacing="12dp"
+                    android:horizontalSpacing="12dp"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

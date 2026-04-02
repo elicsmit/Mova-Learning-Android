@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@drawable/achievement_item_background">
+
+    <!-- Основная иконка достижения -->
+    <ImageView
+        android:id="@+id/iv_achievement_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="#FFCCCCCC"
+        android:contentDescription="@string/achievement_icon" />
+
+    <!-- Название достижения -->
+    <TextView
+        android:id="@+id/tv_achievement_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_achievement_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:text="@string/achievement_name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/achievement_text" />
+
+    <!-- Описание достижения -->
+    <TextView
+        android:id="@+id/tv_achievement_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_achievement_icon"
+        android:layout_below="@id/tv_achievement_name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/achievement_description"
+        android:textSize="14sp"
+        android:textColor="@color/achievement_description" />
+
+    <!-- Оверлей для заблокированных достижений -->
+    <View
+        android:id="@+id/locked_overlay"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/locked_overlay_background"
+        android:visibility="gone" />
+
+    <!-- Иконка замка для заблокированных достижений -->
+    <ImageView
+        android:id="@+id/iv_lock_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:background="#FF666666"
+        android:visibility="gone"
+        android:contentDescription="@string/locked_achievement" />
+
+</RelativeLayout>

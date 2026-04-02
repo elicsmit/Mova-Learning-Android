@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_article_item">
+
+    <ImageView
+        android:id="@+id/ivReadStatus"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_eye_open"
+        android:tint="@color/green_secondary"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,UseAppTint" />
+
+    <TextView
+        android:id="@+id/tvArticleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назва артыкула"
+        android:textColor="#1A365D"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/tvArticleDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Апісанне артыкула"
+        android:textColor="#718096"
+        android:textSize="14sp"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginTop="8dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- В вашем item_article.xml добавьте рядом с заголовком -->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12px"
+        android:gravity="center_vertical"
+        tools:ignore="PxUsage,UselessLeaf">
+
+
+    </LinearLayout>
+
+</LinearLayout>

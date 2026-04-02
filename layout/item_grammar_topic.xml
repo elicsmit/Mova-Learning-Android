@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Текст темы -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTopicTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Назоўнік"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTopicDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Асноўныя правілы і формы"
+                android:textSize="14sp"
+                android:textColor="#666" />
+
+        </LinearLayout>
+
+        <!-- Сердечко избранного -->
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_favorite_outline"
+            android:contentDescription="Дадаць у абранае"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

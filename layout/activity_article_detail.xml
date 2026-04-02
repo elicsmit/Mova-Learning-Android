@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_grammar">
+
+    <!-- App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E6FFFFFF"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Назад"
+            android:tint="@color/red_primary"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Статья"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary"
+            android:gravity="center" />
+
+        <!-- Иконка статуса прочтения -->
+        <ImageButton
+            android:id="@+id/btnReadStatus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Статус прочтения"
+            android:tint="@color/green_secondary"
+            tools:ignore="UseAppTint" />
+
+    </LinearLayout>
+
+    <!-- Основной контент -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:elevation="8dp">
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/tvArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/red_primary"
+                android:gravity="center"
+                android:layout_margin="24dp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Разделитель -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green_secondary"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:alpha="0.3" />
+
+            <!-- Контент -->
+            <TextView
+                android:id="@+id/tvArticleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="12dp"
+                android:padding="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Панель кнопок -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#E6FFFFFF"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Закрыць"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_outlined_rounded"
+            android:textColor="@color/red_primary"
+            android:textSize="16sp"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/btnMarkRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Прачытана"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_filled_rounded"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

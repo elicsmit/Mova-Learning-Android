@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F7FAFC">
+
+    <TextView
+        android:id="@+id/tvTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Практыкаванне"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пытанне будзе тут..."
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:elevation="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варыянт 1"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варыянт 2"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варыянт 3"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnOption4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варыянт 4"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

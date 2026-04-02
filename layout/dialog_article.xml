@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Картинка статьи -->
+    <ImageView
+        android:id="@+id/dialogArticleImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:background="#F5F5F5"
+        android:contentDescription="@string/article_image" />
+
+    <!-- Название статьи -->
+    <TextView
+        android:id="@+id/dialogArticleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Назва артыкула"
+        android:textColor="#D22730"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Автор статьи -->
+    <TextView
+        android:id="@+id/dialogArticleAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Аўтар: Імя Аўтара"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <!-- Дата публикации -->
+    <TextView
+        android:id="@+id/dialogArticleDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Дата публікацыі: 01.01.2024"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+
+    <!-- Контент статьи -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogArticleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="Тэкст артыкула..."
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Кнопка закрытия -->
+    <Button
+        android:id="@+id/closeArticleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Закрыць"
+        android:textColor="#FFFFFF"
+        android:background="#D22730"
+        android:padding="12dp" />
+
+</LinearLayout>

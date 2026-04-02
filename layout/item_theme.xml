@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="140dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/theme_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/themeIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/themeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Тема"
+        android:textSize="14sp"
+        android:textColor="#2E7D32"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

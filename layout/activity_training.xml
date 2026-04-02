@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FAFC"
+    android:orientation="vertical">
+
+    <!-- App Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Назад"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Тренировки"
+            android:textColor="#1A365D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- Прогресс тренировки -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/10"
+                    android:textColor="#2D3748"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="пройдено"
+                    android:textColor="#718096"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="#E2E8F0" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#2D3748"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="баллов"
+                    android:textColor="#718096"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Контейнер для упражнений -->
+    <FrameLayout
+        android:id="@+id/containerExercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <!-- Выбор типа тренировки -->
+        <LinearLayout
+            android:id="@+id/layoutTrainingSelection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Выберите тип тренировки"
+                android:textColor="#2D3748"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="32dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_translate"
+                        android:tint="@android:color/white"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Перевод слов"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardListening"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_hearing"
+                        android:tint="@android:color/white"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Аудирование"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSpelling"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_purple"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_spellcheck"
+                        android:tint="@android:color/white"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Правописание"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Упражнение на перевод -->
+        <LinearLayout
+            android:id="@+id/layoutTranslationExercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <TextView
+                        android:id="@+id/tvTranslationQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="дзякуй"
+                        android:textColor="#2D3748"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="32dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Переведите на русский:"
+                        android:textColor="#718096"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp" />
+
+                    <EditText
+                        android:id="@+id/etTranslationAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="Введите перевод..."
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnTranslationCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_primary"
+                        android:text="Проверить"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Упражнение на правописание -->
+        <LinearLayout
+            android:id="@+id/layoutSpellingExercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <TextView
+                        android:id="@+id/tvSpellingQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Напишите на белорусском:"
+                        android:textColor="#2D3748"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="32dp"
+                        android:gravity="center" />
+
+                    <EditText
+                        android:id="@+id/etSpellingAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="Введите слово на белорусском..."
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btnSpellingCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_primary"
+                        android:text="Проверить"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Layout для аудирования -->
+        <LinearLayout
+            android:id="@+id/layoutListeningExercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvListeningQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Прослушайте слово и введите перевод"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Кнопка проигрывания аудио -->
+            <Button
+                android:id="@+id/btnPlayAudio"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_audio_circle"
+                android:text="🎵"
+                android:textSize="24sp"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/etListeningAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите перевод на русский..."
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnListeningCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Проверить"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:id="@+id/btnListeningNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Далее"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Результат ответа -->
+        <LinearLayout
+            android:id="@+id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <ImageView
+                        android:id="@+id/ivResult"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Правильно!"
+                        android:textColor="#2D3748"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvCorrectAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="спасибо"
+                        android:textColor="#718096"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="24dp" />
+
+                    <Button
+                        android:id="@+id/btnResultNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_primary"
+                        android:text="Следующее слово"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

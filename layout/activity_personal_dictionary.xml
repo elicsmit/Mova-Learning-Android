@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FAFC"
+    android:orientation="vertical">
+
+    <!-- App Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Назад"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Мой словарь"
+            android:textColor="#1A365D"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/btnAddWord"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
+            android:contentDescription="Добавить слово"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <!-- Статистика -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Всего слов -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTotalWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#2D3748"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="слов всего"
+                    android:textColor="#718096"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="#E2E8F0" />
+
+            <!-- Изучено -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLearnedWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#2D3748"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="изучено"
+                    android:textColor="#718096"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="#E2E8F0" />
+
+            <!-- На изучении -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLearningWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#2D3748"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="на изучении"
+                    android:textColor="#718096"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Поиск и фильтры -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Строка поиска -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="#718096"
+                    tools:ignore="ContentDescription,UseAppTint" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Поиск слов..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    tools:ignore="Autofill,HardcodedText" />
+
+            </LinearLayout>
+
+            <!-- Фильтры -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFilterAll"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/filter_selected"
+                    android:text="Все"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnFilterLearned"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/filter_unselected"
+                    android:text="Изученные"
+                    android:textColor="#4A5568"
+                    android:textSize="12sp"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnFilterLearning"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/filter_unselected"
+                    android:text="На изучении"
+                    android:textColor="#4A5568"
+                    android:textSize="12sp"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Сообщение о пустом списке -->
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:gravity="center"
+        android:text="Нет добавленных слов"
+        android:textColor="#718096"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <!-- Список слов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Плавающая кнопка добавления -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Добавить слово"
+        app:backgroundTint="#4299E1"
+        app:tint="@android:color/white"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

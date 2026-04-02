@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Белорусское слово"
+        android:textColor="#2D3748"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etBelarusian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Введите слово на белорусском"
+        android:padding="12dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Русский перевод"
+        android:textColor="#2D3748"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etRussian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Введите перевод на русском"
+        android:padding="12dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Английский перевод"
+        android:textColor="#2D3748"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Введите перевод на английском"
+        android:padding="12dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пример использования"
+        android:textColor="#2D3748"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etExample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:hint="Введите пример предложения"
+        android:padding="12dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+</LinearLayout>

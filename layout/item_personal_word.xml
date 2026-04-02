@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Слово и кнопка удаления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Слова"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Выдаліць"
+                android:tint="#FF5252"
+                tools:ignore="HardcodedText,UseAppTint" />
+
+        </LinearLayout>
+
+        <!-- Перевод -->
+        <TextView
+            android:id="@+id/tvTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Пераклад"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- Категория и дата -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#E3F2FD"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="Катэгорыя"
+                android:textColor="#4285F4"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvDateAdded"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="01.01.2024"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
